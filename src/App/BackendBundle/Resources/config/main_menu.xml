@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item role="ROLE_LIST_USER" route="backend_user_root" icon-class="fa fa-user">
+        <item hidden="true" route="backend_user_index" />
+        <item hidden="true" route="backend_user_create" />
+        <item hidden="true" route="backend_user_edit" />
+    </item>
+</menu>

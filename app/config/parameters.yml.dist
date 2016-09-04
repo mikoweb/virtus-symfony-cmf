@@ -1,0 +1,63 @@
+# This file is a "template" of what your parameters.yml file should look like
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     vsymfo
+    database_user:     john
+    database_password: ~
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       mailer@john.doe
+    mailer_password:   ~
+    mailer_port:       465
+    mailer_encryption: ssl
+
+    locales:           [en, pl]
+
+    # Regular expression for locale codes in security.yml
+    security_locales: "[a-zA-Z-_]+"
+    # Admin panel dir
+    security_admin_panel_dir: panel
+
+    # A secret key that's used to generate certain security-related tokens
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+    # App themes
+    app_themes:                [default, backend_default]
+    app_theme_dir:             theme
+    app_theme_active:          default
+    app_theme_backend_active:  default
+
+    # Default SEO values
+    seo_sitename: Virtus Symfony CMF
+    seo_title_default: Virtus Symfony CMF
+    seo_title_mode: only_title
+    seo_title_separator: -
+    seo_description: ~
+    seo_keywords: ~
+
+    # Document settings
+    doc_resources_cache_lifetime: 0
+    doc_resources_loading_timeout: 60000
+    doc_meta_viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+    favicon_enable: true
+    favicon_tile_color: "#ffffff"
+    pdf_duration: 3600
+
+    # CDN settings
+    cdn_enable: false
+    cdn_javascript: ''
+    cdn_css: ''
+    cdn_image: ''
+
+    # Pagination
+    pagination_limit: 20
+    pagination_pages_in_range: 5
+
+    # Default emails
+    email_address_default: default@john.doe
+    email_address_noreply: noreply@john.doe

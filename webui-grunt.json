@@ -1,0 +1,5 @@
+{
+    "copy": [
+        "picturefill/dist/picturefill.min.js"
+    ]
+}

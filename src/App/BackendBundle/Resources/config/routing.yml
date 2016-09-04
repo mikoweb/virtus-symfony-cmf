@@ -1,0 +1,3 @@
+backend:
+    resource: "@AppBackendBundle/Resources/config/routing_backend.yml"
+    prefix:   /%security_admin_panel_dir%

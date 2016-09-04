@@ -1,0 +1,26 @@
+{#
+ * @param array urls   | scripts URLs
+ * @param string group | loader group, default "bundle"
+ * @param bool async   | default true, asynchrony, when devFix == true then this option is skip where env=dev
+ * @param bool devFix  | default true, fix load order in env=dev
+ #}
+{% macro jsloader_asset(urls, group, async, devFix) %}
+    {% if devFix is null %}
+        {% set devFix = true %}
+    {% endif %}
+    {% if async is null %}
+        {% set async = true %}
+    {% endif %}
+    {% if devFix and app.environment == 'dev' %}
+        {% set async_value = 'false' %}
+    {% elseif async %}
+        {% set async_value = 'true' %}
+    {% else %}
+        {% set async_value = 'false' %}
+    {% endif %}
+    {% if urls is iterable %}
+    <script type="text/javascript">
+        jsloader.add("{{ group is null ? 'bundle' : group }}", [{% for url in urls %}"{{ url }}"{% if not loop.last %},{% endif %}{% endfor %}], {{ async_value }});
+    </script>
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,21 @@
+{% autoescape false %}
+{% set data = {
+    'timeout': timeout,
+    'res': resources,
+    'translations': translations,
+    'locale': app.request.locale,
+    'theme_name': theme_name,
+    'path': {
+        'base': path.base,
+        'theme': path.theme,
+        'resources': path.resources,
+        'cdn_javascript': path.cdn_javascript,
+        'cdn_css': path.cdn_css,
+        'cdn_image': path.cdn_image
+    },
+    'requirejs': {
+        'baseUrl': path.base ~ '/js'
+    }
+} %}
+startapp({{ data|json_encode(constant('JSON_HEX_QUOT') or constant('JSON_HEX_TAG') or constant('JSON_HEX_AMP') or constant('JSON_HEX_APOS')) }});
+{% endautoescape %}

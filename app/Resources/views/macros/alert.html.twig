@@ -1,0 +1,42 @@
+{#
+ * Bootstrap alert
+ *
+ * @var string content      | message content
+ * @var string class        | class, default alert-success
+ * @var bool dismissible    | dismissible alert, default false
+ * @var string btnCloseText | content of close button
+ #}
+{% macro alert(content, class, dismissible, btnCloseText) %}
+    {% if dismissible is null %}
+        {% set dismissible = false %}
+    {% endif %}
+    {% if class is null %}
+        {% set class = 'alert-success' %}
+    {% endif %}
+    {% if btnCloseText is null %}
+        {% set btnCloseText = '&times;' %}
+    {% endif %}
+    <div class="alert {{ class }}{% if dismissible %} alert-dismissible{% endif %}" role="alert">
+        {% if dismissible %}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">{{ btnCloseText|raw }}</span></button>{% endif %}
+        {{ content|raw }}
+    </div>
+{% endmacro %}
+
+{#
+ * Flasgbag bootstrap alert
+ *
+ * @var string flashbagName | message name
+ * @var string class        | class, default alert-success
+ * @var bool dismissible    | dismissible alert, default false
+ * @var string btnCloseText | content of close button
+ #}
+{% macro alert_flashbag(flashbagName, class, dismissible, btnCloseText) %}
+    {% set flashbag = app.session.flashbag.get(flashbagName) %}
+    {% if flashbag is not empty %}
+        {% set message = '' %}
+        {% for flashMessage in flashbag %}
+            {% set message = message ~ '<p>' ~ flashMessage ~ '</p>' %}
+        {% endfor %}
+        {{ _self.alert(message, class, dismissible, btnCloseText) }}
+    {% endif %}
+{% endmacro %}

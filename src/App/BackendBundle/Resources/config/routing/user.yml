@@ -1,0 +1,23 @@
+crud:
+    path:                  /
+    options:
+        route_prefix:      backend_user
+        controller:        AppBackendBundle:User
+        except:            [show, delete]
+        index_pagination:  true
+        index_sort:        true
+        index_sort_params:
+            sort: u.id
+            direction: asc
+
+_lock:
+    path: /{id}/lock
+    methods: [GET]
+    defaults: { _controller: lock }
+    requirements: { id: \d+ }
+
+_unlock:
+    path: /{id}/unlock
+    methods: [GET]
+    defaults: { _controller: unlock }
+    requirements: { id: \d+ }

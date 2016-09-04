@@ -1,0 +1,5 @@
+{% extends 'knp_menu.html.twig' %}
+
+{% block linkElement %}<a href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>{% if item.extras.icon_class is defined %}<span class="{{ item.extras.icon_class }}"></span>{{ ' ' }}{% endif %}{{ block('label') }}</a>{% endblock %}
+
+{% block spanElement %}<span{{ knp_menu.attributes(item.labelAttributes) }}>{% if item.extras.icon_class is defined %}<span class="{{ item.extras.icon_class }}"></span>{{ ' ' }}{% endif %}{{ block('label') }}</span>{% endblock %}

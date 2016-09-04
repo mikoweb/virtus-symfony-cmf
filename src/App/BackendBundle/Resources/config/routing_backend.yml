@@ -1,0 +1,20 @@
+backend_homepage:
+    path:     /
+    defaults: { _controller: AppBackendBundle:Default:index }
+
+backend_login:
+    path:  /login
+    defaults: { _controller: AppBackendBundle:Security:login }
+
+backend_login_check:
+    path:  /login_check
+    defaults: { _controller: vSymfoFOSUserBundle:Security:check }
+
+backend_logout:
+    path:  /logout
+    defaults: { _controller: vSymfoFOSUserBundle:Security:logout }
+
+backend_user:
+    resource: "@AppBackendBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+    type:     crud

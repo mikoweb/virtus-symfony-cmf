@@ -1,0 +1,9 @@
+resources:
+    javascript:
+        groups: [{name: jsloader, required: []}]
+        sources:
+            jsloader:
+                - webui/engine/js/modernizr/modernizr-custom.js
+                - webui/engine/js/modernizr/yepnope.js
+                - webui/engine/js/core/jsloader/jsloader.js
+                - ../web/bundles/vsymfobundlecore/js/startapp.js

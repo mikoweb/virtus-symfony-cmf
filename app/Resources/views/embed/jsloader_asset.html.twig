@@ -1,0 +1,21 @@
+{#
+ * Example usage:
+ *
+ * {% embed "::embed/jsloader_asset.html.twig"
+ *     with {'group': 'bundle', 'async': true, 'devFix': true} only %}
+ *     {% block asset %}
+ *         {% javascripts
+ *             '@AppFrontendBundle/Resources/public/js/file1.js'
+ *             '@AppFrontendBundle/Resources/public/js/file2.js'
+ *             filter='uglifyjs2' output='assetic/js/output.js' %}
+ *         {% set urls = urls|merge([asset_url]) %}
+ *         {% endjavascripts %}
+ *         {{ parent() }}
+ *     {% endblock %}
+ * {% endembed %}
+#}
+{% import "::macros/assetic.html.twig" as asset_helper %}
+{% set urls = [] %}
+{% block asset %}
+    {{ asset_helper.jsloader_asset(urls, group, async, devFix) }}
+{% endblock %}

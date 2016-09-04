@@ -1,0 +1,20 @@
+resources:
+    javascript:
+        groups:
+            - {name: framework, required: []}
+            - {name: core, required: [framework]}
+            - {name: bundle, required: [core]}
+            - {name: theme, required: [core]}
+            - {name: none, required: [theme]}
+        sources:
+            framework:
+                - webui/engine/js/framework/framework-marionette.min.js
+            core:
+                - webui/engine/js/core/core.min.js
+    stylesheet:
+        groups:
+            - {name: framework, required: []}
+            - {name: core, required: [framework]}
+            - {name: bundle, required: [core]}
+            - {name: theme, required: [core]}
+            - {name: none, required: [theme]}

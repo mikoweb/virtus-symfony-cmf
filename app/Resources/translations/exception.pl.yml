@@ -1,0 +1,10 @@
+exception:
+    error_overall:
+        h1: Ups! Wystąpił problem...
+        h2: Kod błędu %status_code% %status_text%.
+        info: Strona jest tymczasowo niedostępna.
+    login_blocked:
+        head_text: Tymczasowa blokada.
+        message: Odnotowaliśmy %max_attempts% prób nieudanego logowania.<br />Spróbuj ponowanie za %block_duration% minut.
+        create_new_account: Utwórz nowe konto
+        forgot_data: Zapomniałeś nazwy/hasła?

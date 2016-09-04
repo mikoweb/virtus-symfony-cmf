@@ -1,0 +1,10 @@
+exception:
+    error_overall:
+        h1: Oops! An Error Occurred
+        h2: The server returned a %status_code% %status_text%.
+        info: This page is temporarily unavailable.
+    login_blocked:
+        head_text: Temporary lock.
+        message: We recorded %max_attempts% unsuccessful login attempts.<br />Please try again in %block_duration% minutes.
+        create_new_account: Create new account
+        forgot_data: Forgot your username/password?

@@ -3,8 +3,9 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON("package.json"),
         path: {
             web: 'web/',
-            'private': 'private/',
+            private: 'private/',
             modules: 'node_modules/',
+            bowerComponents: 'bower_components/',
             jsFolder: 'js/'
         },
         clean: {
@@ -24,12 +25,31 @@ module.exports = function (grunt) {
                 src: '<%= path.private %><%= path.jsFolder %>',
                 dest: '<%= path.web %><%= path.jsFolder %>'
             }
+        },
+        copy: {
+            panelTheme: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= path.bowerComponents %>vsymfo-panel-theme/',
+                        src: ['**', '!public/**'],
+                        dest: '<%= path.private %>theme/backend_panel/'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= path.bowerComponents %>vsymfo-panel-theme/public/',
+                        src: ['**'],
+                        dest: '<%= path.web %>theme/backend_panel/'
+                    }
+                ]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-symlink');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('js-prod', [
         'clean:js',
@@ -39,5 +59,9 @@ module.exports = function (grunt) {
     grunt.registerTask('js-dev', [
         'clean:js',
         'symlink:js'
+    ]);
+
+    grunt.registerTask('copy-panel-theme', [
+        'copy:panelTheme'
     ]);
 };

@@ -34,12 +34,13 @@
         "jms/i18n-routing-bundle": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "2.3",
         "stof/doctrine-extensions-bundle": "~1.2",
-        "jms/security-extra-bundle": "~1.6",
+        "jms/security-extra-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "~2.5",
         "braincrafted/bootstrap-bundle": "~2.0",
         "oneup/flysystem-bundle": "~1.1",
-        "mikoweb/vsymfo-fos-user-bundle": "~0.0.1",
         "mikoweb/vsymfo-core-bundle": "~0.2.7",
+        "mikoweb/vsymfo-panel-bundle": "~0.0.1",
+        "mikoweb/vsymfo-user-bundle": "~0.0.1",
         "knplabs/knp-menu-bundle": "^2.0"
     },
     "require-dev": {

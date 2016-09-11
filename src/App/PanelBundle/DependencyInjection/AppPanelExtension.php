@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\BackendBundle\DependencyInjection;
+namespace App\PanelBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -20,9 +20,9 @@ use Symfony\Component\DependencyInjection\Loader;
 /**
  * @author Rafał Mikołajun <rafal@mikoweb.pl>
  * @package vSymfo CMF
- * @subpackage BackendBundle_DependencyInjection
+ * @subpackage PanelBundle_DependencyInjection
  */
-class AppBackendExtension extends Extension
+class AppPanelExtension extends Extension
 {
     /**
      * {@inheritdoc}

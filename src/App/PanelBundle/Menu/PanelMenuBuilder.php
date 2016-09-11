@@ -10,23 +10,23 @@
  * file that was distributed with this source code.
  */
 
-namespace App\BackendBundle\Menu;
+namespace App\PanelBundle\Menu;
 
 use vSymfo\Core\Menu\MenuBuilderAbstract;
 
 /**
  * @author Rafał Mikołajun <rafal@mikoweb.pl>
  * @package vSymfo CMF
- * @subpackage Menu
+ * @subpackage PanelBundle_Menu
  */
-class MainMenuBuilder extends MenuBuilderAbstract
+class PanelMenuBuilder extends MenuBuilderAbstract
 {
     /**
      * {@inheritdoc}
      */
     public function createMenu()
     {
-        return $this->loadMenuFromXml(__DIR__ . '/../Resources/config/main_menu.xml');
+        return $this->loadMenuFromXml(__DIR__ . '/../Resources/config/panel_menu.xml');
     }
 
     /**
@@ -34,6 +34,6 @@ class MainMenuBuilder extends MenuBuilderAbstract
      */
     protected function translationDomain()
     {
-        return 'backend_main_menu';
+        return 'panel_menu';
     }
 }

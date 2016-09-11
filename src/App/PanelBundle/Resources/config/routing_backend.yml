@@ -1,0 +1,18 @@
+panel_index:
+    path:     /
+    defaults: { _controller: AppPanelBundle:Default:index }
+
+panel_login:
+    path:     /login
+    defaults: { _controller: vSymfoUserBundle:Security:login }
+
+panel_login_check:
+    path:     /login_check
+    defaults: { _controller: vSymfoFOSUserBundle:Security:check }
+
+panel_logout:
+    path:     /logout
+    defaults: { _controller: vSymfoFOSUserBundle:Security:logout }
+
+vsymfo_user_bundle:
+    resource: "@vSymfoUserBundle/Resources/config/routing.yml"

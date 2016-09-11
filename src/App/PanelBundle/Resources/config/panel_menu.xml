@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item role="ROLE_LIST_USER" route="panel_user_root" icon-class="fa fa-user">
+        <item hidden="true" route="panel_user_index" />
+        <item hidden="true" route="panel_user_create" />
+        <item hidden="true" route="panel_user_edit" />
+    </item>
+    <item role="ROLE_LIST_GROUP" route="panel_group_root" icon-class="fa fa-users">
+        <item hidden="true" route="panel_group_index" />
+        <item hidden="true" route="panel_group_create" />
+        <item hidden="true" route="panel_group_edit" />
+        <item hidden="true" route="panel_group_destroy" />
+    </item>
+</menu>

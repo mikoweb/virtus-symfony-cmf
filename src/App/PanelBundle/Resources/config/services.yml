@@ -1,6 +1,6 @@
 services:
-    app_backend.menu_builder:
-        class: App\BackendBundle\Menu\MainMenuBuilder
+    app_panel.main_menu_builder:
+        class: App\PanelBundle\Menu\PanelMenuBuilder
         arguments:
             - "@knp_menu.factory"
             - "@security.authorization_checker"
@@ -8,8 +8,8 @@ services:
             - "@request_stack"
             - "@router"
 
-    app_backend.main_menu:
+    app_panel.main_menu:
         class: Knp\Menu\MenuItem
-        factory: ["@app_backend.menu_builder", createMenu]
+        factory: ["@app_panel.main_menu_builder", createMenu]
         tags:
-            - { name: knp_menu.menu, alias: backend_main }
+            - { name: knp_menu.menu, alias: panel_main }

@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\BackendBundle\DependencyInjection;
+namespace App\PanelBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * @author Rafał Mikołajun <rafal@mikoweb.pl>
  * @package vSymfo CMF
- * @subpackage BackendBundle_DependencyInjection
+ * @subpackage PanelBundle_DependencyInjection
  */
 class Configuration implements ConfigurationInterface
 {
@@ -28,7 +28,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('app_backend');
+        $rootNode = $treeBuilder->root('app_panel');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

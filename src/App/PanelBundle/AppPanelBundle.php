@@ -10,15 +10,15 @@
  * file that was distributed with this source code.
  */
 
-namespace App\BackendBundle;
+namespace App\PanelBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * @author Rafał Mikołajun <rafal@mikoweb.pl>
  * @package vSymfo CMF
- * @subpackage BackendBundle
+ * @subpackage PanelBundle
  */
-class AppBackendBundle extends Bundle
+class AppPanelBundle extends Bundle
 {
 }

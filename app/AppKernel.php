@@ -33,9 +33,10 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new vSymfo\Bundle\FOSUserBundle\vSymfoFOSUserBundle(),
             new vSymfo\Bundle\CoreBundle\vSymfoBundleCoreBundle(),
-            new App\BackendBundle\AppBackendBundle(),
+            new vSymfo\Bundle\PanelBundle\PanelBundle(),
+            new vSymfo\Bundle\UserBundle\vSymfoUserBundle(),
+            new App\PanelBundle\AppPanelBundle(),
             new App\CoreBundle\AppCoreBundle(),
-            new App\WebBundle\AppWebBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

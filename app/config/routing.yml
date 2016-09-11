@@ -1,5 +1,5 @@
-backend:
-    resource: "@AppBackendBundle/Resources/config/routing.yml"
+panel:
+    resource: "@AppPanelBundle/Resources/config/routing.yml"
     options:
         theme_group: backend
 
@@ -12,7 +12,7 @@ vsymfo_core_bundle:
 # Login block error page.
 vsymfo_exception_login_blocked:
     path:     /account/login-blocked
-    defaults: { _controller: "AppBackendBundle:Exception:loginBlocked" }
+    defaults: { _controller: "AppPanelBundle:Exception:loginBlocked" }
 
 liip_theme:
     resource: "@LiipThemeBundle/Resources/config/routing.xml"

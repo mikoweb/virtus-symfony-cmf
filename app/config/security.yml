@@ -22,13 +22,13 @@ security:
                 provider:                       fos_userbundle
                 csrf_token_generator:           security.csrf.token_manager
 
-                login_path:                     backend_login
+                login_path:                     panel_login
                 use_forward:                    false
-                check_path:                     backend_login_check
+                check_path:                     panel_login_check
                 post_only:                      true
 
                 always_use_default_target_path: false
-                default_target_path:            backend_homepage
+                default_target_path:            panel_index
                 target_path_parameter:          _target_path
                 use_referer:                    true
 
@@ -41,8 +41,8 @@ security:
 
                 csrf_parameter:                 _csrf_token
             logout:
-                path:                           backend_logout
-                target:                         backend_homepage
+                path:                           panel_logout
+                target:                         panel_index
 
         # front-end
         #frontend:

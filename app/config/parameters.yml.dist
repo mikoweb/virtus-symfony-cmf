@@ -27,10 +27,10 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
 
     # App themes
-    app_themes:                [default, backend_default]
+    app_themes:                [default, backend_panel]
     app_theme_dir:             theme
     app_theme_active:          default
-    app_theme_backend_active:  default
+    app_theme_backend_active:  panel
 
     # Default SEO values
     seo_sitename: Virtus Symfony CMF

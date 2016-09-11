@@ -38,7 +38,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form_themes:
-        - 'AppWebBundle::form-bootstrap.html.twig'
+        - 'PanelBundle::form-bootstrap.html.twig'
     exception_controller: "vsymfo_core.twig.exception_controller:showAction"
 
 # Assetic Configuration
@@ -149,9 +149,9 @@ liip_theme:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: frontend
-    user_class: App\CoreBundle\Entity\User
+    user_class: vSymfo\Bundle\UserBundle\Entity\User
     group:
-        group_class: App\CoreBundle\Entity\Group
+        group_class: vSymfo\Bundle\UserBundle\Entity\Group
     from_email:
         address: "%email_address_noreply%"
         sender_name: "%seo_sitename%"
@@ -169,7 +169,7 @@ jms_i18n_routing:
 ccdn_user_security:
     entity:
         user:
-            class: App\CoreBundle\Entity\User # Required
+            class: vSymfo\Bundle\UserBundle\Entity\User # Required
     route_referer:
         enabled: false
     login_shield:
@@ -185,8 +185,8 @@ ccdn_user_security:
             routes:
                 - fos_user_security_check
                 - fos_user_security_logout
-                - backend_login_check
-                - backend_logout
+                - panel_login_check
+                - panel_logout
 
 # KnpPaginatorBundle
 knp_paginator:
@@ -197,8 +197,8 @@ knp_paginator:
         sort_direction_name: direction
         distinct: true
     template:
-        pagination: "AppWebBundle::pagination.html.twig"
-        sortable: "AppWebBundle::sortable_link.html.twig"
+        pagination: "PanelBundle::pagination.html.twig"
+        sortable: "PanelBundle::sortable_link.html.twig"
 
 # OneupFlysystemBundle
 oneup_flysystem:

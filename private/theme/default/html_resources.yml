@@ -1,0 +1,7 @@
+resources:
+    javascript:
+        sources:
+            theme: []
+    stylesheet:
+        sources:
+            theme: []

@@ -14,7 +14,10 @@
         'cdn_image': path.cdn_image
     },
     'requirejs': {
-        'baseUrl': path.base ~ '/js'
+        'baseUrl': path.base ~ '/js',
+        'paths': {
+            'select2': '{{path}}/vendor/select2/dist/js/select2.full.min'
+        }
     }
 } %}
 startapp({{ data|json_encode(constant('JSON_HEX_QUOT') or constant('JSON_HEX_TAG') or constant('JSON_HEX_AMP') or constant('JSON_HEX_APOS')) }});

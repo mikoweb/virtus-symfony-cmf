@@ -1,5 +1,7 @@
 {
     "copy": [
-        "picturefill/dist/picturefill.min.js"
+        "picturefill/dist/picturefill.min.js",
+        "select2/dist/js/select2.full.min.js",
+        "select2/dist/js/select2.min.js"
     ]
 }

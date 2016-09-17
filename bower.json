@@ -2,6 +2,7 @@
     "name": "Virtus Symfony CMF",
     "dependencies": {
         "picturefill": "~3.0.1",
-        "vsymfo-panel-theme": "master"
+        "vsymfo-panel-theme": "master",
+        "select2": "~4.0.0"
     }
 }

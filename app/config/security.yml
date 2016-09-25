@@ -87,6 +87,7 @@ security:
 
     access_control:
         # panel
+        - { path: ^/(((%security_locales%)/%security_admin_panel_dir%)|(%security_admin_panel_dir%))/login-blocked$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/(((%security_locales%)/%security_admin_panel_dir%)|(%security_admin_panel_dir%))/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/(((%security_locales%)/%security_admin_panel_dir%)|(%security_admin_panel_dir%))/, role: ROLE_PANEL_ACCESS }
         # front-end

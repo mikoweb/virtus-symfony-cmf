@@ -9,9 +9,5 @@ core_bundle:
 vsymfo_core_bundle:
     resource: "@vSymfoBundleCoreBundle/Resources/config/routing.yml"
 
-liip_theme:
-    resource: "@LiipThemeBundle/Resources/config/routing.xml"
-    prefix: /theme
-
 liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"

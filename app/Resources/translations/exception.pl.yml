@@ -5,6 +5,9 @@ exception:
         info: Strona jest tymczasowo niedostępna.
     login_blocked:
         head_text: Tymczasowa blokada.
+        breadcrumb: Blokada logowania
         message: Odnotowaliśmy %max_attempts% prób nieudanego logowania.<br />Spróbuj ponowanie za %block_duration% minut.
-        create_new_account: Utwórz nowe konto
-        forgot_data: Zapomniałeś nazwy/hasła?
+    error_404:
+        breadcrumb: Nie znaleziono
+        title: Nie znaleziono strony.
+        description: Strona, której szukasz nie istnieje.

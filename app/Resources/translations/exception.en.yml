@@ -5,6 +5,9 @@ exception:
         info: This page is temporarily unavailable.
     login_blocked:
         head_text: Temporary lock.
+        breadcrumb: Login blocked
         message: We recorded %max_attempts% unsuccessful login attempts.<br />Please try again in %block_duration% minutes.
-        create_new_account: Create new account
-        forgot_data: Forgot your username/password?
+    error_404:
+        breadcrumb: Not found
+        title: Page not found.
+        description: The page you are looking for doesn't exist.

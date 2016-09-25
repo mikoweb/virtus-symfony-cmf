@@ -14,5 +14,9 @@ panel_logout:
     path:     /logout
     defaults: { _controller: vSymfoFOSUserBundle:Security:logout }
 
+vsymfo_exception_login_blocked:
+    path:     /login-blocked
+    defaults: { _controller: "PanelBundle:Exception:loginBlocked" }
+
 vsymfo_user_bundle:
     resource: "@vSymfoUserBundle/Resources/config/routing.yml"

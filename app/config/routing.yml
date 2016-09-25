@@ -9,11 +9,6 @@ core_bundle:
 vsymfo_core_bundle:
     resource: "@vSymfoBundleCoreBundle/Resources/config/routing.yml"
 
-# Login block error page.
-vsymfo_exception_login_blocked:
-    path:     /account/login-blocked
-    defaults: { _controller: "AppPanelBundle:Exception:loginBlocked" }
-
 liip_theme:
     resource: "@LiipThemeBundle/Resources/config/routing.xml"
     prefix: /theme

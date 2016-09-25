@@ -17,6 +17,12 @@
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mikoweb/LiipThemeBundle"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.1.*",
@@ -41,7 +47,8 @@
         "mikoweb/vsymfo-core-bundle": "~0.2.7",
         "mikoweb/vsymfo-panel-bundle": "~0.0.1",
         "mikoweb/vsymfo-user-bundle": "~0.0.1",
-        "knplabs/knp-menu-bundle": "^2.0"
+        "knplabs/knp-menu-bundle": "^2.0",
+        "liip/theme-bundle": "dev-fix/twig_bundle"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

@@ -2,6 +2,10 @@
     "copy": [
         "picturefill/dist/picturefill.min.js",
         "select2/dist/js/select2.full.min.js",
-        "select2/dist/js/select2.min.js"
+        "select2/dist/js/select2.min.js",
+        {
+            "directory": "select2/dist/js/i18n",
+            "src": "**"
+        }
     ]
 }

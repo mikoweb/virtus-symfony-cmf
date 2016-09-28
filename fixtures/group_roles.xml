@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups>
-    <group reference="Group.Admin">
-        <role>ROLE_PANEL_ACCESS</role>
-        <role>ROLE_LIST_USER</role>
-        <role>ROLE_NEW_USER</role>
-        <role>ROLE_EDIT_USER</role>
-        <role>ROLE_LOCK_USER</role>
-        <role>ROLE_UNLOCK_USER</role>
-        <role>ROLE_LIST_GROUP</role>
-        <role>ROLE_NEW_GROUP</role>
-        <role>ROLE_EDIT_GROUP</role>
-        <role>ROLE_REMOVE_GROUP</role>
-    </group>
+    <group reference="Group.Admin" allroles="true" />
 </groups>

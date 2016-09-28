@@ -65,6 +65,12 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
      */
     public function createUser($email, $username, $pass, $groupReference)
     {
+        if ($found = $this->userManager->findUserByUsername($username)) {
+            $this->setReference('User.' . $username, $found);
+
+            return $found;
+        }
+
         /** @var User $user */
         $user = $this->userManager->createUser();
         $user->setEmail($email)

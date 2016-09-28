@@ -17,7 +17,6 @@ use Doctrine\Common\Persistence\ObjectManager;
 use vSymfo\Bundle\UserBundle\Entity\Group;
 use vSymfo\Bundle\UserBundle\Entity\Role;
 use vSymfo\Core\DataFixtures\AbstractGroupFixture;
-use vSymfo\Core\Entity\GroupAbstract;
 
 /**
  * @author Rafał Mikołajun <rafal@mikoweb.pl>
@@ -45,7 +44,7 @@ class LoadGroupData extends AbstractGroupFixture implements OrderedFixtureInterf
             $this->setReference('Role.' . $role->getRole(), $role);
         }
 
-        $this->loadGroupRolesFromXml('group_roles.xml');
+        $this->loadGroupRolesFromXml('group_roles.xml', $manager);
 
         $manager->flush();
     }
@@ -53,9 +52,17 @@ class LoadGroupData extends AbstractGroupFixture implements OrderedFixtureInterf
     /**
      * {@inheritdoc}
      */
-    public function createGroupEntity()
+    public function getGroupClass()
     {
-        return new Group();
+        return Group::class;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRoleClass()
+    {
+        return Role::class;
     }
 
     /**

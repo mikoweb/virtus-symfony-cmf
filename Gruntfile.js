@@ -8,6 +8,9 @@ module.exports = function (grunt) {
             bowerComponents: 'bower_components/',
             jsFolder: 'js/'
         },
+        exec: {
+            js: 'cd <%= path.private %>src && grunt'
+        },
         clean: {
             js: ['<%= path.web %><%= path.jsFolder %>']
         },
@@ -50,8 +53,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-symlink');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-exec');
 
     grunt.registerTask('js-prod', [
+        'exec:js',
         'clean:js',
         'uglify:js'
     ]);

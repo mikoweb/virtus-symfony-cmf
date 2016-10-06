@@ -9,6 +9,7 @@ resources:
         sources:
             framework:
                 - webui/engine/js/framework/framework-marionette.min.js
+                - babel-helpers.js
             core:
                 - webui/engine/js/core/core.min.js
     stylesheet:

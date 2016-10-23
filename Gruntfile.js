@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             jsFolder: 'js/'
         },
         exec: {
-            js: 'cd <%= path.private %>src && grunt'
+            js: 'cd <%= path.private %>src && npm install && grunt'
         },
         clean: {
             js: ['<%= path.web %><%= path.jsFolder %>']

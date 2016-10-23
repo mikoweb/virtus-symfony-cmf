@@ -6,6 +6,9 @@
         {
             "directory": "select2/dist/js/i18n",
             "src": "**"
-        }
+        },
+        "backbone-form/dist/backbone-form.min.js",
+        "sweetalert/dist/sweetalert.min.js",
+        "toastr/toastr.min.js"
     ]
 }

@@ -1,3 +1,6 @@
 define('bootstrap-toggle', ['jquery'], function ($) {
-    return $.fn.bootstrapToggle.Constructor;
+    var toggle = $.fn.bootstrapToggle.Constructor;
+    toggle.DEFAULTS.on = '<i class="fa fa-check" aria-hidden="true"></i>';
+    toggle.DEFAULTS.off = '-';
+    return toggle;
 });

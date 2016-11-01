@@ -10,7 +10,7 @@ resources:
                 - babel-helpers.js
             core:
                 - webui/engine/js/core/core.min.js
-                - ../bower_components/bootstrap-toggle/js/bootstrap-toggle.js
+                - ../node_modules/bootstrap-toggle/js/bootstrap-toggle.js
                 - legacy.js
     stylesheet:
         groups:

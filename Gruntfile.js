@@ -5,11 +5,10 @@ module.exports = function (grunt) {
             web: 'web/',
             private: 'private/',
             modules: 'node_modules/',
-            bowerComponents: 'bower_components/',
             jsFolder: 'js/'
         },
         exec: {
-            js: 'cd <%= path.private %>src && npm install && grunt'
+            js: 'cd <%= path.private %>src && npm install && npm run dev-dist'
         },
         clean: {
             js: ['<%= path.web %><%= path.jsFolder %>']
@@ -34,13 +33,13 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= path.bowerComponents %>vsymfo-panel-theme/',
+                        cwd: '<%= path.modules %>vsymfo-panel-theme/',
                         src: ['**', '!public/**'],
                         dest: '<%= path.private %>theme/backend_panel/'
                     },
                     {
                         expand: true,
-                        cwd: '<%= path.bowerComponents %>vsymfo-panel-theme/public/',
+                        cwd: '<%= path.modules %>vsymfo-panel-theme/public/',
                         src: ['**'],
                         dest: '<%= path.web %>theme/backend_panel/'
                     }

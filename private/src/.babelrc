@@ -1,5 +1,6 @@
 {
   "sourceMap": false,
+  "moduleIds": true,
   "presets": ["es2015"],
   "plugins": [
     "transform-remove-strict-mode",
@@ -7,6 +8,5 @@
     "transform-class-properties",
     "external-helpers"
   ],
-  "moduleIds": true,
   "ast": false
 }

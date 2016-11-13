@@ -4,3 +4,7 @@ define('bootstrap-toggle', ['jquery'], function ($) {
     toggle.DEFAULTS.off = '-';
     return toggle;
 });
+
+define('datepicker', ['jquery'], function ($) {
+    return $.fn.datepicker;
+});

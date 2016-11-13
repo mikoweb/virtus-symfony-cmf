@@ -10,6 +10,9 @@ resources:
                 - babel-helpers.js
             core:
                 - webui/engine/js/core/core.min.js
+                - ../node_modules/air-datepicker/dist/js/datepicker.min.js
+                - ../node_modules/air-datepicker/dist/js/i18n/datepicker.en.js
+                - ../node_modules/air-datepicker/dist/js/i18n/datepicker.pl.js
                 - ../node_modules/bootstrap-toggle/js/bootstrap-toggle.js
                 - legacy.js
     stylesheet:

@@ -9,6 +9,8 @@
         ["select2-i18n", "select2/dist/js/i18n", "select2/i18n"],
         ["backbone.form", "backbone-form/dist/backbone-form.min.js", "backbone-form/backbone-form.js"],
         ["sweetalert", "sweetalert/dist/sweetalert.min.js", "sweetalert/sweetalert.js"],
-        ["toastr", "toastr/build/toastr.min.js", "toastr/toastr.js"]
+        ["toastr", "toastr/build/toastr.min.js", "toastr/toastr.js"],
+        ["vanilla-masker", "vanilla-masker/build/vanilla-masker.min.js", "vanilla-masker/vanilla-masker.js"],
+        ["moment", "moment/min/moment.min.js", "moment/moment.js"]
     ]
 }

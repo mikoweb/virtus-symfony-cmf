@@ -2,8 +2,10 @@
   "paths": {
     "picturefill": "{{path}}/picturefill/picturefill",
     "backbone.form": "{{path}}/backbone-form/backbone-form",
-    "sweetalert": "{{path}}/sweetalert/sweetalert",
+    "vanilla-masker": "{{path}}/vanilla-masker/vanilla-masker",
     "toastr": "{{path}}/toastr/toastr",
+    "moment": "{{path}}/moment/moment",
+    "sweetalert": "{{path}}/sweetalert/sweetalert",
     "select2": "{{path}}/select2/select2"
   }
 }

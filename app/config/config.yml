@@ -141,8 +141,10 @@ liip_theme:
     assetic_integration: true
     path_patterns:
         app_resource:
+            - "%%app_path%%/../../private/%app_theme_dir%_extra/%%current_theme%%/views/%%template%%"
             - "%%app_path%%/../../private/%app_theme_dir%/%%current_theme%%/views/%%template%%"
         bundle_resource_dir:
+            - "%%dir%%/../../private/%app_theme_dir%_extra/%%current_theme%%/bundles/%%bundle_name%%/%%override_path%%"
             - "%%dir%%/../../private/%app_theme_dir%/%%current_theme%%/bundles/%%bundle_name%%/%%override_path%%"
 
 # FOSUserBundle

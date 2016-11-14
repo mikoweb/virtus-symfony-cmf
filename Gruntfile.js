@@ -42,6 +42,12 @@ module.exports = function (grunt) {
                         cwd: '<%= path.modules %>vsymfo-panel-theme/public/',
                         src: ['**'],
                         dest: '<%= path.web %>theme/backend_panel/'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= path.private %>theme_extra/backend_panel/public/',
+                        src: ['**'],
+                        dest: '<%= path.web %>theme/backend_panel/'
                     }
                 ]
             }

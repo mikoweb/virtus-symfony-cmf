@@ -8,3 +8,8 @@ services:
         class: Twig_Extensions_Extension_Text
         tags:
             - { name: twig.extension }
+
+    vsymfo_core.controller.login_blocked:
+        class: vSymfo\Bundle\PanelBundle\Controller\ExceptionController
+        calls:
+            - [setContainer, ["@service_container"]]

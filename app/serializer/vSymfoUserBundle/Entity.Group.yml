@@ -1,0 +1,2 @@
+vSymfo\Bundle\UserBundle\Entity\Group:
+    exclusion_policy: ALL

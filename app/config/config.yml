@@ -234,6 +234,19 @@ liip_imagine:
             filters:
                 downscale: { max: [1980, 1280] }
 
+jms_serializer:
+    metadata:
+        directories:
+            FOSUserBundle:
+                path: "%kernel.root_dir%/serializer/FOSUserBundle"
+                namespace_prefix: "FOS\\UserBundle"
+            vSymfoCore:
+                path: "%kernel.root_dir%/serializer/vSymfoCore"
+                namespace_prefix: "vSymfo\\Core"
+            vSymfoUserBundle:
+                path: "%kernel.root_dir%/serializer/vSymfoUserBundle"
+                namespace_prefix: "vSymfo\\Bundle\\UserBundle"
+
 # vSymfo Core
 vsymfo_core:
     themes: "%app_themes%"

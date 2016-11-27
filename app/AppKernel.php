@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Oneup\FlysystemBundle\OneupFlysystemBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
             new vSymfo\Bundle\FOSUserBundle\vSymfoFOSUserBundle(),
             new vSymfo\Bundle\CoreBundle\vSymfoBundleCoreBundle(),
             new vSymfo\Bundle\PanelBundle\PanelBundle(),

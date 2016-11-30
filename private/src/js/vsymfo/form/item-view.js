@@ -7,7 +7,8 @@ import Form from 'backbone.form';
 export default class ItemView extends Form.CollectionItemView {
     onRender() {
         const input = this.$el.find('input.input-toggle');
-        input.data('bs.toggle', null);
-        input.bootstrapToggle();
+        if (!input.data('bs.toggle')) {
+            input.bootstrapToggle();
+        }
     }
 }

@@ -8,6 +8,7 @@
         "node": ">4.2.0"
     },
     "dependencies": {
+        "uglify-js": "^2.7.5",
         "webui-cli": "~1.0.0",
         "webui-boilerplate": "~1.0.4",
         "picturefill": "~3.0.2",
@@ -20,13 +21,5 @@
         "air-datepicker": "~2.2.3",
         "vanilla-masker": "~1.0.9",
         "moment": "2.16.0"
-    },
-    "devDependencies": {
-        "grunt": "~1.0",
-        "grunt-contrib-uglify": "~1.0",
-        "grunt-contrib-clean": "~1.0",
-        "grunt-contrib-copy": "~1.0",
-        "grunt-contrib-symlink": "~1.0",
-        "grunt-exec": "^1.0.1"
     }
 }
